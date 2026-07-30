@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Page Not Found — Caliphs Schools</title>
+<meta name="description" content="This page doesn't exist. Head back to the Caliphs Schools Scratch Coding Showcase.">
+<meta name="theme-color" content="#01AA41">
+<link rel="icon" type="image/png" href="/logo.png">
+<link rel="apple-touch-icon" href="/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --green: #01AA41;
+    --green-dark: #018a35;
+    --green-tint: #e6f8ed;
+    --ink: #10241a;
+    --paper: #fbfbf8;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;height:100%;}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Inter',system-ui,sans-serif;
+    -webkit-font-smoothing:antialiased;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:32px;
+    overflow:hidden;
+  }
+  body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    z-index:-1;
+    background-image:
+      radial-gradient(circle at 10% 15%, rgba(1,170,65,0.07) 0, transparent 40%),
+      radial-gradient(circle at 90% 88%, rgba(1,170,65,0.08) 0, transparent 45%);
+  }
+
+  .logo-badge{
+    width:64px;
+    height:64px;
+    border-radius:18px;
+    background:linear-gradient(150deg,var(--green),var(--green-dark));
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#fff;
+    font-family:'Baloo 2',sans-serif;
+    font-weight:800;
+    font-size:24px;
+    box-shadow:0 10px 30px rgba(1,170,65,0.18);
+    overflow:hidden;
+    margin-bottom:28px;
+  }
+  .logo-badge img{width:100%;height:100%;object-fit:contain;padding:7px;}
+
+  /* Two disconnected Scratch-style blocks, standing in for the "missing piece" */
+  .block-scene{
+    display:flex;
+    align-items:center;
+    gap:18px;
+    margin-bottom:8px;
+  }
+  .block{
+    position:relative;
+    width:88px;
+    height:64px;
+    border-radius:12px;
+    background:linear-gradient(160deg,var(--green),var(--green-dark));
+    box-shadow:0 8px 20px rgba(1,170,65,0.2);
+  }
+  .block::before{
+    content:"";
+    position:absolute;
+    top:-9px; left:18px;
+    width:26px; height:10px;
+    background:inherit;
+    border-radius:6px 6px 0 0;
+  }
+  .block.ghost{
+    background:transparent;
+    border:2.5px dashed rgba(1,170,65,0.35);
+    box-shadow:none;
+  }
+  .block.ghost::before{background:transparent;border:2.5px dashed rgba(1,170,65,0.35);border-bottom:none;}
+
+  .gap-mark{
+    font-family:'Baloo 2',sans-serif;
+    font-weight:800;
+    font-size:28px;
+    color:var(--green);
+  }
+
+  h1{
+    font-family:'Baloo 2',sans-serif;
+    font-weight:800;
+    font-size:clamp(30px,6vw,46px);
+    margin:18px 0 10px;
+    line-height:1.1;
+  }
+  h1 span{color:var(--green);}
+
+  p{
+    font-size:15.5px;
+    color:#5c6b62;
+    max-width:420px;
+    line-height:1.6;
+    margin:0 0 30px;
+  }
+
+  .home-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    background:var(--green);
+    color:#fff;
+    text-decoration:none;
+    font-weight:700;
+    font-size:15px;
+    padding:13px 26px;
+    border-radius:12px;
+    box-shadow:0 10px 24px rgba(1,170,65,0.25);
+    transition:transform 0.18s ease, box-shadow 0.18s ease;
+  }
+  .home-btn:hover{
+    transform:translateY(-2px);
+    box-shadow:0 14px 30px rgba(1,170,65,0.32);
+  }
+  .home-btn svg{width:16px;height:16px;fill:#fff;}
+
+  .code-tag{
+    margin-top:36px;
+    font-size:12px;
+    font-weight:600;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    color:#a3ada6;
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    *{transition:none !important;}
+  }
+</style>
+</head>
+<body>
+
+  <div class="logo-badge" id="logoBadge">
+    <img src="/logo.png" alt="Caliphs Schools logo" onerror="this.remove(); document.getElementById('logoBadge').textContent='CS';">
+  </div>
+
+  <div class="block-scene" aria-hidden="true">
+    <div class="block"></div>
+    <span class="gap-mark">?</span>
+    <div class="block ghost"></div>
+  </div>
+
+  <h1>This block doesn't <span>connect</span>.</h1>
+  <p>The page you're looking for isn't here. It may have been moved, or the link might be off — but every project is still on the home page.</p>
+
+  <a href="/" class="home-btn">
+    <svg viewBox="0 0 16 16"><path d="M8 1L1 7v8h5v-5h4v5h5V7z"/></svg>
+    Back to the showcase
+  </a>
+
+  <span class="code-tag">Error 404 — Caliphs Schools</span>
+
+</body>
+</html>
